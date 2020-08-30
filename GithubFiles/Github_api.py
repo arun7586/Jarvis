@@ -167,26 +167,6 @@ class Git(object):          #named Git to avoid name conflicts
         # speak.say(self.output)
         return self.output
 
-    # def updateAFileInRepo(self, **args):
-    #     reponame = args["repo name"]
-    #     filename = args["file name"]
-    #     description = args["description"]
-    #     try:
-    #         repo = self.git.get_user().get_repo(reponame)
-    #         contents = repo.get_contents(filename)
-    #         repo.update_file(contents.path, commit, description, contents.sha)
-    #         self.output="Successfully updated the file."
-    #         self.mail_body={
-    #             "Repo name":reponame,
-    #             "File Name":filename,
-    #             "Commit Message":commit,
-    #             "Description":description
-    #         }
-    #         send_mail.sendMail(self.mail_body)
-    #     except:
-    #         self.output="Error in updating the file"
-    #     speak.say(self.output)
-
     def getLatestCommitDateOfUser(self, **args):
         try:
             author=self.git.get_user().login
@@ -286,25 +266,6 @@ class Git(object):          #named Git to avoid name conflicts
             self.output = "Error in getting the issue."
         # speak.say(self.output)
         return self.output
-
-    # def closeIssueByNumber(self, **args):
-    #     reponame = args["repo name"]
-    #     issue_number = args["issue number"]
-    #     try:
-    #         repo = self.git.get_user().get_repo(reponame)
-    #         open_issue = repo.get_issue(number=issue_number)
-    #         open_issue.edit(state='closed')
-    #         self.output="The issue is closed"
-    #         self.mail_body={
-    #             "Repo name":reponame,
-    #             "Issue number":issue_number,
-    #             "issue state":"closed"
-    #         }
-    #         send_mail.sendMail(self.mail_body)
-    #     except:
-    #         self.output = "Error in closing the issue."
-    #     # speak.say(self.output)
-    #     return self.output
     def closeIssueByNumber(self, **args):
         reponame = args["repo name"]
         issue_number = int(args["issue number"])
@@ -340,60 +301,4 @@ class Git(object):          #named Git to avoid name conflicts
         return self.output
 
 
-# github = Git()
-# github.searchRepoByLanguage('Python')   #use capital P
-# github.searchRepoByLanguage('python')   
-# github.listOfOpenIssues('gittest')
-# github.getLabelsOfRepo('nodejs-tutorial')
-# github.searchRepoWithGoodFirstIssue()
-# github.getAllContentsOfRepo('nodejs-tutorial')
-# github.createNewRepo('gittest2')
-# github.createANewFileInRepo('gittest','test6.txt','this is the gitrepo test 4','test4 commit')       
-                                     #create a new filename everytime to avoid error
-# github.deleteAFileFromRepo('gittest','test6.txt')
-# github.updateAFileInRepo('gittest','test1.txt','this is the updated text','edit test')
-# github.getLatestCommitDateOfRepo('gittest')
 
-# github.createANewPullRequest('gittest',"testing pull request 1",'this is a new pull request testing')
-
-# github.createANewIssue('gittest','testing issue')
-# github.createIssueWithBody('gittest','testing issue2','this is a new issue test ok')
-# github.createIssueWithLabel('gittest','testing issue', 'this a new  issue with label test','wontfix')
-# github.getIssueByNumber('gittest',6)
-# github.closeIssueByNumber('gittest',6)
-# github.closeAllOpenIssues('gittest')
-"""
-import requests
-from requests.auth import HTTPBasicAuth
-import json
-
-
-# def searchCode():
-
-# auth = HTTPBasicAuth(user_email, access_token)
-base_url="https://api.github.com/"
-url= '/search/code'
-api= base_url+url
-
-authurl = base_url+"user"
-a = requests.get(authurl, auth=('ksatyarth2','3c0450a2f009731b56e0f6c3a683cea6f3cc6044'))
-res = json.loads(a.text)
-print(res['login'])
-auth = HTTPBasicAuth('ksatyarth2', '3c0450a2f009731b56e0f6c3a683cea6f3cc6044')
-headers = {
-            "Accept": "application/json",
-            
-        }
-
-query = json.dumps({
-    'q':"model+in:readme+user:ksatyarth2"
-})
-response = requests.request(
-            "GET",
-            api,    
-            headers=headers,
-            auth=auth,
-            params= query
-            )
-print(response)
-"""
