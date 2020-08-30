@@ -60,6 +60,14 @@ Main query include-
 ## License
 [MIT License](https://github.com/sandeepinigithub/IPM/blob/master/LICENSE) 
 
+> Contributors :
+> - [Tarun Agarwal](https://github.com/TechTarun)
+> - [Sandeep Kumar Shukla](https://github.com/sandeepinigithub)
+> - [Sumrah Fatima](https://github.com/sumrah)
+> - [Kritika Gupta](https://github.com/kritikagupta0007)
+> - [Kumar Satyarth](https://github.com/ksatyarth2)
+> - [Hari Om kushwaha](https://github.com/hariomkushwaha)
+
 ## Future Scope
 >- Designing of flutter application that enhances experiences of web application
 
