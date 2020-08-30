@@ -63,6 +63,7 @@ Main query include-
 
 ## Installation
 ### Steps are-
+>- Note : While setting project don't forget to add your personal token (of github etc) and credential .
 #### 1- Clone the repository
 #### 2- Create a new virtual environment
 #### 3- Now install the requirements.txt file
