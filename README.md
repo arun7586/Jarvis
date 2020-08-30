@@ -57,6 +57,9 @@ Main query include-
 - https://github.com/flutter/flutter
 - https://pub.dev/
 
+## License
+[MIT License](https://github.com/sandeepinigithub/IPM/blob/master/LICENSE) 
+
 ## Future Scope
 >- Designing of flutter application that enhances experiences of web application
 
