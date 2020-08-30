@@ -5,7 +5,7 @@ from requests.auth import HTTPBasicAuth
 import json
 
 base_url = "https://abesit-ipm.atlassian.net"
-auth = HTTPBasicAuth("tarunagarwal27.99@gmail.com", "tl4F0d5aapRqiR7BfGkiBBDD")
+auth = HTTPBasicAuth("tarunagarwal27.99@gmail.com", "tl4F0d5aapRqiR7BfGkiBBDD")  #Add your credential
 all_projects = dict()
 all_users = dict()
 

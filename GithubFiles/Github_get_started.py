@@ -1,7 +1,7 @@
 from github import Github
 import json
 
-git = Github("3c0450a2f009731b56e0f6c3a683cea6f3cc6044")
+git = Github("Add your personal token of github") #add token here then only program will run 
 
 all_repo = list()       #for repo
 all_users = list()
